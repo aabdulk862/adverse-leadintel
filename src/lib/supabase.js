@@ -21,3 +21,21 @@ export function getSupabase() {
   _client = createClient(url, key);
   return _client;
 }
+
+/**
+ * Browser-side Supabase client (uses VITE_ env vars, respects RLS).
+ * Used by UI components.
+ */
+let _browserClient = null;
+export const supabase = new Proxy({}, {
+  get(_, prop) {
+    if (!_browserClient) {
+      const url = (typeof import.meta !== "undefined" && import.meta.env?.VITE_SUPABASE_URL)
+        || process.env.SUPABASE_URL || "http://localhost:54321";
+      const key = (typeof import.meta !== "undefined" && import.meta.env?.VITE_SUPABASE_ANON_KEY)
+        || process.env.SUPABASE_SERVICE_KEY || "placeholder";
+      _browserClient = createClient(url, key);
+    }
+    return _browserClient[prop];
+  },
+});

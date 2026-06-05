@@ -3,7 +3,6 @@
  * Every source must output records matching this shape.
  */
 export const RAW_RECORD_SCHEMA = {
-  $schema: "https://json-schema.org/draft/2020-12/schema",
   title: "Lead Intelligence Raw Record",
   type: "object",
   required: ["business_name", "source_name", "vertical", "metro"],

@@ -83,3 +83,54 @@ CREATE TRIGGER opportunities_updated_at
   BEFORE UPDATE ON opportunities
   FOR EACH ROW
   EXECUTE FUNCTION update_updated_at();
+
+-- Agent roles (orchestrator agent registry)
+CREATE TABLE IF NOT EXISTS agent_roles (
+  id              UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  name            TEXT NOT NULL,
+  role_type       TEXT NOT NULL,
+  description     TEXT,
+  system_prompt   TEXT,
+  input_schema    JSONB DEFAULT '{}',
+  output_schema   JSONB DEFAULT '{}',
+  status          TEXT DEFAULT 'active',
+  config          JSONB DEFAULT '{}',
+  created_at      TIMESTAMPTZ DEFAULT now(),
+  updated_at      TIMESTAMPTZ DEFAULT now()
+);
+
+-- Pipeline runs
+CREATE TABLE IF NOT EXISTS pipeline_runs (
+  id              UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  status          TEXT DEFAULT 'pending',
+  request_summary TEXT,
+  tasks           JSONB DEFAULT '[]',
+  result          JSONB,
+  created_at      TIMESTAMPTZ DEFAULT now(),
+  updated_at      TIMESTAMPTZ DEFAULT now()
+);
+
+-- Tasks (individual pipeline steps)
+CREATE TABLE IF NOT EXISTS tasks (
+  id              UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  pipeline_id     UUID REFERENCES pipeline_runs(id),
+  name            TEXT NOT NULL,
+  agent_role_id   UUID REFERENCES agent_roles(id),
+  agent_role_name TEXT,
+  status          TEXT DEFAULT 'pending',
+  input           JSONB DEFAULT '{}',
+  output          JSONB,
+  depends_on      JSONB DEFAULT '[]',
+  created_at      TIMESTAMPTZ DEFAULT now(),
+  updated_at      TIMESTAMPTZ DEFAULT now()
+);
+
+-- Artifacts (generated content)
+CREATE TABLE IF NOT EXISTS artifacts (
+  id              UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  task_id         UUID REFERENCES tasks(id),
+  pipeline_id     UUID REFERENCES pipeline_runs(id),
+  artifact_type   TEXT NOT NULL,
+  content         JSONB DEFAULT '{}',
+  created_at      TIMESTAMPTZ DEFAULT now()
+);

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import AgentCard from "../components/agents/AgentCard";
 import { getActiveAgentRoles } from "../../orchestrator/db.js";
+import styles from "./AgentRegistryPage.module.css";
 
 export default function AgentRegistryPage() {
   const [roles, setRoles] = useState([]);
@@ -49,11 +50,7 @@ export default function AgentRegistryPage() {
 
   if (isLoading) {
     return (
-      <div
-        role="status"
-        aria-label="Loading agent roles"
-        style={{ padding: "2rem", textAlign: "center" }}
-      >
+      <div className={styles.loadingState} role="status" aria-label="Loading agent roles">
         <p>Loading agent roles…</p>
       </div>
     );
@@ -61,37 +58,22 @@ export default function AgentRegistryPage() {
 
   if (error) {
     return (
-      <div
-        role="alert"
-        style={{ padding: "2rem", textAlign: "center", color: "#e74c3c" }}
-      >
+      <div className={styles.errorState} role="alert">
         <p>Error: {error}</p>
       </div>
     );
   }
 
   return (
-    <div style={{ padding: "1.5rem" }}>
-      <h2 style={{ marginBottom: "1rem" }}>Agent Registry</h2>
+    <div className={styles.page}>
+      <h2 className={styles.heading}>Agent Registry</h2>
 
       {roles.length === 0 ? (
-        <div
-          role="status"
-          aria-label="Empty agent registry"
-          style={{ padding: "2rem", textAlign: "center", color: "#888" }}
-        >
+        <div className={styles.emptyState} role="status" aria-label="Empty agent registry">
           <p>No active agent roles are configured.</p>
         </div>
       ) : (
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-            gap: "1rem",
-          }}
-          role="list"
-          aria-label="Agent roles"
-        >
+        <div className={styles.grid} role="list" aria-label="Agent roles">
           {roles.map((role) => (
             <div key={role.id} role="listitem">
               <AgentCard role={role} onClick={handleCardClick} />
@@ -101,87 +83,27 @@ export default function AgentRegistryPage() {
       )}
 
       {selectedRole && (
-        <div
-          role="region"
-          aria-label="Agent role detail"
-          style={{
-            marginTop: "1.5rem",
-            padding: "1.5rem",
-            border: "1px solid #ddd",
-            borderRadius: "8px",
-            background: "#fafafa",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              marginBottom: "1rem",
-            }}
-          >
-            <h3 style={{ margin: 0 }}>{selectedRole.name}</h3>
-            <button
-              onClick={handleCloseDetail}
-              aria-label="Close detail panel"
-              style={{
-                background: "none",
-                border: "none",
-                fontSize: "1.25rem",
-                cursor: "pointer",
-                padding: "0.25rem 0.5rem",
-              }}
-            >
+        <div className={styles.detailPanel} role="region" aria-label="Agent role detail">
+          <div className={styles.detailHeader}>
+            <h3>{selectedRole.name}</h3>
+            <button onClick={handleCloseDetail} aria-label="Close detail panel" className={styles.closeBtn}>
               ✕
             </button>
           </div>
 
-          <section style={{ marginBottom: "1rem" }}>
-            <h4 style={{ marginBottom: "0.5rem" }}>System Prompt</h4>
-            <pre
-              style={{
-                whiteSpace: "pre-wrap",
-                wordBreak: "break-word",
-                background: "#f0f0f0",
-                padding: "0.75rem",
-                borderRadius: "4px",
-                fontSize: "0.875rem",
-              }}
-            >
-              {selectedRole.system_prompt}
-            </pre>
+          <section className={styles.section}>
+            <h4>System Prompt</h4>
+            <pre>{selectedRole.system_prompt}</pre>
           </section>
 
-          <section style={{ marginBottom: "1rem" }}>
-            <h4 style={{ marginBottom: "0.5rem" }}>Input Schema</h4>
-            <pre
-              style={{
-                whiteSpace: "pre-wrap",
-                wordBreak: "break-word",
-                background: "#f0f0f0",
-                padding: "0.75rem",
-                borderRadius: "4px",
-                fontSize: "0.875rem",
-              }}
-            >
-              {JSON.stringify(selectedRole.input_schema, null, 2)}
-            </pre>
+          <section className={styles.section}>
+            <h4>Input Schema</h4>
+            <pre>{JSON.stringify(selectedRole.input_schema, null, 2)}</pre>
           </section>
 
-          <section>
-            <h4 style={{ marginBottom: "0.5rem" }}>Output Schema</h4>
-            <pre
-              style={{
-                whiteSpace: "pre-wrap",
-                wordBreak: "break-word",
-                background: "#f0f0f0",
-                padding: "0.75rem",
-                borderRadius: "4px",
-                fontSize: "0.875rem",
-              }}
-            >
-              {JSON.stringify(selectedRole.output_schema, null, 2)}
-            </pre>
+          <section className={styles.section}>
+            <h4>Output Schema</h4>
+            <pre>{JSON.stringify(selectedRole.output_schema, null, 2)}</pre>
           </section>
         </div>
       )}

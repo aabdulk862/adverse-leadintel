@@ -3,6 +3,7 @@ import ChatInterface from "../components/agents/ChatInterface";
 import AlignmentCard from "../components/agents/AlignmentCard";
 import TaskBoard from "../components/agents/TaskBoard";
 import ArtifactViewer from "../components/agents/ArtifactViewer";
+import styles from "./AgentChatPage.module.css";
 import {
   classifyIntent,
   decomposeRequest,
@@ -201,28 +202,32 @@ export default function AgentChatPage() {
   );
 
   return (
-    <div>
-      <ChatInterface
-        messages={messages}
-        onSendMessage={handleSendMessage}
-        isLoading={isLoading}
-      />
-
-      {pendingAlignment && (
-        <AlignmentCard
-          alignmentText={pendingAlignment.alignmentText}
-          onApprove={handleApprove}
-          onRevise={handleRevise}
+    <div className={styles.page}>
+      <div className={styles.chatPanel}>
+        <ChatInterface
+          messages={messages}
+          onSendMessage={handleSendMessage}
+          isLoading={isLoading}
         />
-      )}
+      </div>
 
-      {tasks.length > 0 && (
-        <TaskBoard tasks={tasks} pipelineStatus={currentPipeline?.status} />
-      )}
+      <aside className={styles.sidebar}>
+        {pendingAlignment && (
+          <AlignmentCard
+            alignmentText={pendingAlignment.alignmentText}
+            onApprove={handleApprove}
+            onRevise={handleRevise}
+          />
+        )}
 
-      {artifacts.map((artifact) => (
-        <ArtifactViewer key={artifact.task_id} artifact={artifact} />
-      ))}
+        {tasks.length > 0 && (
+          <TaskBoard tasks={tasks} pipelineStatus={currentPipeline?.status} />
+        )}
+
+        {artifacts.map((artifact) => (
+          <ArtifactViewer key={artifact.task_id} artifact={artifact} />
+        ))}
+      </aside>
     </div>
   );
 }

@@ -6,7 +6,6 @@ import Ajv from "ajv";
  * Used by demoGen to validate generated configs before writing to Supabase.
  */
 export const packageSchema = {
-  $schema: "https://json-schema.org/draft/2020-12/schema",
   title: "Adverse WeBuilder Package_Config",
   type: "object",
   required: ["slug", "name", "category", "description", "sections"],

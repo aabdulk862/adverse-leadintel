@@ -1,0 +1,84 @@
+.page {
+  padding: var(--space-6);
+}
+
+.heading {
+  margin: 0 0 var(--space-5) 0;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+/* ── States ── */
+.loadingState,
+.emptyState {
+  padding: var(--space-12);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.errorState {
+  padding: var(--space-12);
+  text-align: center;
+  color: var(--color-error);
+}
+
+/* ── Detail panel ── */
+.detailPanel {
+  margin-top: var(--space-6);
+  padding: var(--space-6);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+}
+
+.detailHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+
+.detailHeader h3 {
+  margin: 0;
+}
+
+.closeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-muted);
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.closeBtn:hover {
+  background: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+}
+
+.section {
+  margin-bottom: var(--space-5);
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.section h4 {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-3);
+}

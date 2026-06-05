@@ -1,23 +1,8 @@
-import { createClient } from "@supabase/supabase-js";
+import { supabase } from "../lib/supabase.js";
 import { validateAgainstSchema } from "../agents/contracts.js";
 
-let _supabaseAdmin = null;
-
 function getSupabaseAdmin() {
-  if (_supabaseAdmin) return _supabaseAdmin;
-
-  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-  const supabaseServiceRoleKey = import.meta.env.VITE_SUPABASE_SERVICE_ROLE_KEY;
-
-  if (!supabaseUrl || !supabaseServiceRoleKey) {
-    console.warn(
-      "[db.js] Supabase service-role not configured. DB operations will return errors.",
-    );
-    return null;
-  }
-
-  _supabaseAdmin = createClient(supabaseUrl, supabaseServiceRoleKey);
-  return _supabaseAdmin;
+  return supabase;
 }
 
 export { getSupabaseAdmin as supabaseAdmin };
@@ -26,13 +11,7 @@ export { getSupabaseAdmin as supabaseAdmin };
 // Internal helper — get the lazily-initialized client
 // ---------------------------------------------------------------------------
 const db = () => {
-  const client = getSupabaseAdmin();
-  if (!client) {
-    throw new Error(
-      "Supabase is not configured. Set VITE_SUPABASE_URL and VITE_SUPABASE_SERVICE_ROLE_KEY to enable persistence.",
-    );
-  }
-  return client;
+  return supabase;
 };
 
 // ---------------------------------------------------------------------------

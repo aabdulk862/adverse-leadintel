@@ -2,7 +2,9 @@ import { NavLink, Outlet } from "react-router-dom";
 import styles from "./AgentLayout.module.css";
 
 const navItems = [
-  { to: "/agents", label: "Chat", icon: "fa-solid fa-comments", end: true },
+  { to: "/agents", label: "Dashboard", icon: "fa-solid fa-gauge-high", end: true },
+  { to: "/agents/leads", label: "Leads", icon: "fa-solid fa-bullseye" },
+  { to: "/agents/chat", label: "Chat", icon: "fa-solid fa-comments" },
   { to: "/agents/registry", label: "Agents", icon: "fa-solid fa-robot" },
   {
     to: "/agents/artifacts",

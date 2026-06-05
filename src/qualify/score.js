@@ -66,7 +66,7 @@ export function score(signals, opportunity) {
   }
 
   const finalScore = Math.min(points, 100);
-  const qualified = finalScore >= 60;
+  const qualified = finalScore >= 25;
   const opportunity_type = qualified ? determineType(signals) : null;
 
   return {
