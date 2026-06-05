@@ -20,23 +20,26 @@ export function score(signals, opportunity) {
     return disqualified("inactive_license");
   }
 
+  // Ground truth: does the record have a website URL?
+  const hasWebsiteUrl = Boolean(opportunity.website);
+
   let points = 0;
   const reasons = [];
 
   // Strong business, weak website (+30)
-  if (signals.google_review_count > 50 && (!signals.has_website || !signals.has_mobile || !signals.has_https)) {
+  if (signals.google_review_count > 50 && (!hasWebsiteUrl || !signals.has_mobile || !signals.has_https)) {
     points += 30;
     reasons.push("strong_business_weak_website");
   }
 
   // No website at all (+20)
-  if (!signals.has_website) {
+  if (!hasWebsiteUrl) {
     points += 20;
     reasons.push("no_website");
   }
 
   // Website outdated (+15)
-  if (signals.has_website && signals.domain_age_years > 5 && !signals.has_mobile) {
+  if (hasWebsiteUrl && signals.has_website && signals.domain_age_years > 5 && !signals.has_mobile) {
     points += 15;
     reasons.push("outdated_website");
   }
@@ -53,14 +56,14 @@ export function score(signals, opportunity) {
     reasons.push("active_business");
   }
 
-  // No booking/scheduling (+5)
-  if (!signals.has_booking) {
+  // No booking/scheduling (+5) — only if no website
+  if (!hasWebsiteUrl) {
     points += 5;
     reasons.push("no_booking");
   }
 
-  // No contact form (+5)
-  if (!signals.has_contact_form) {
+  // No contact form (+5) — only if no website
+  if (!hasWebsiteUrl) {
     points += 5;
     reasons.push("no_contact_form");
   }

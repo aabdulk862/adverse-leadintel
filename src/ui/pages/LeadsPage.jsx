@@ -107,7 +107,15 @@ export default function LeadsPage() {
                   </span>
                 </td>
                 <td>
-                  <div className={styles.name}>{lead.business_name}</div>
+                  <a
+                    href={`https://www.google.com/search?q=${encodeURIComponent(lead.business_name + " " + (lead.address || lead.metro))}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.name}
+                    title="Google this business"
+                  >
+                    {lead.business_name} <i className="fa-solid fa-magnifying-glass" style={{ fontSize: "0.625rem", opacity: 0.4 }} />
+                  </a>
                   <div className={styles.meta}>
                     {lead.address || lead.metro}
                     {lead.website && (
