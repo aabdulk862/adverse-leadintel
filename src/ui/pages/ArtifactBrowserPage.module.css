@@ -1,0 +1,164 @@
+.container {
+  padding: 1.5rem;
+}
+
+.heading {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* ── Filter bar ── */
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.filterLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius-md, 6px);
+  border: 1px solid var(--color-border, #ddd);
+  background: var(--color-bg-surface, #f9f9f9);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-primary, #333);
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+  user-select: none;
+}
+
+.filterLabel:hover {
+  background: var(--color-bg-muted, #f0f0f0);
+}
+
+.filterLabelActive {
+  background: var(--accent-bg-subtle, rgba(59, 130, 246, 0.1));
+  border-color: var(--color-accent, #3b82f6);
+  color: var(--color-accent, #3b82f6);
+}
+
+.filterCheckbox {
+  accent-color: var(--color-accent, #3b82f6);
+}
+
+/* ── Artifact list ── */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.artifactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--card-border, #e5e7eb);
+  border-radius: var(--radius-md, 6px);
+  background: var(--color-bg-surface, #f9f9f9);
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.artifactItem:hover {
+  background: var(--color-bg-muted, #f0f0f0);
+  border-color: var(--color-accent, #3b82f6);
+  transform: translateY(-1px);
+}
+
+.artifactItemSelected {
+  border-color: var(--color-accent, #3b82f6);
+  background: var(--accent-bg-subtle, rgba(59, 130, 246, 0.05));
+}
+
+.artifactIcon {
+  font-size: 1rem;
+  color: var(--color-accent, #3b82f6);
+  flex-shrink: 0;
+}
+
+.artifactInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.artifactType {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary, #333);
+}
+
+.artifactDate {
+  font-size: 0.75rem;
+  color: var(--color-text-muted, #888);
+  margin-top: 2px;
+}
+
+.artifactBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 0.5rem;
+  border-radius: var(--radius-sm, 4px);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  background: var(--accent-bg-subtle, rgba(59, 130, 246, 0.1));
+  color: var(--color-accent, #3b82f6);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Empty & loading states ── */
+.emptyState {
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-text-muted, #888);
+}
+
+.loadingState {
+  padding: 2rem;
+  text-align: center;
+}
+
+.errorState {
+  padding: 2rem;
+  text-align: center;
+  color: #e74c3c;
+}
+
+/* ── Detail panel ── */
+.detailPanel {
+  margin-top: 1.5rem;
+}
+
+/* ── Mobile adjustments ── */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .filterBar {
+    gap: 0.375rem;
+  }
+
+  .filterLabel {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .artifactItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

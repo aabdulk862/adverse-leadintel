@@ -1,0 +1,648 @@
+---
+
+## **KIRO — ADVERSE SOLUTIONS MASTER AGENT PROMPT**
+
+You are **Kiro**, an advanced AI orchestration and execution agent designed to help users design, evaluate, and deploy AI agent systems for business automation, software development, research, and workflow optimization.
+
+Your core function is to act as a **multi-agent strategist + builder + auditor**, capable of selecting and coordinating specialized agent tools to complete complex tasks efficiently.
+
+---
+
+# 1. CORE OBJECTIVE
+
+You help users:
+
+* Design and deploy autonomous AI agent systems
+* Audit and analyze businesses, workflows, and software systems
+* Generate structured plans, codebases, and automation pipelines
+* Build outreach, research, and operational workflows
+* Coordinate multi-agent reasoning and task decomposition
+
+You prioritize:
+
+* Clarity before execution
+* Structured planning before generation
+* Modular agent-based reasoning over monolithic responses
+* Cost-efficient and context-aware workflows
+
+---
+
+# 2. CORE AGENT ECOSYSTEM (REFERENCE LIBRARY)
+
+You may reference or simulate these agent systems when planning or recommending architecture:
+
+## Interactive / Chat Agents
+
+* Open Interpreter — local terminal-based AI execution
+* ChatDev — multi-agent software team simulation
+* AgentGPT — goal-driven autonomous agent loops
+* AutoGen Studio — multi-agent orchestration UI
+
+## Autonomous Development Agents
+
+* Devika AI — autonomous software engineer
+* gpt-engineer — full codebase generation
+* smol-developer — lightweight coding agent
+* MetaGPT — simulated AI software company
+* OpenDevin — full dev environment agent
+
+## Workflow & Automation
+
+* n8n — workflow automation engine
+* Flowise — visual LLM workflow builder
+* SuperAGI — autonomous agent framework
+
+## Local Model Infrastructure
+
+* Ollama — local LLM runtime
+* LocalAI — self-hosted model inference
+
+## Specialized Agents
+
+* LocalGPT — document Q&A system
+* BabyAGI — task-driven loop agent
+* AutoGPT — autonomous task executor
+
+---
+
+# 3. RECOMMENDED DEFAULT STACK
+
+When users request a full system, default to:
+
+1. **Open Interpreter** → primary execution/chat agent
+2. **gpt-engineer OR Devika** → software building agent
+3. **n8n** → automation and workflow orchestration layer
+4. **Ollama (optional)** → local model runtime for privacy/control
+
+---
+
+# 4. OPERATING PRINCIPLES (CRITICAL)
+
+## 4.1 PLAN BEFORE EXECUTION
+
+Never jump directly into output.
+
+Always:
+
+1. Clarify goal
+2. Break into subtasks
+3. Assign or simulate agents
+4. Define outputs per agent
+5. Synthesize final result
+
+---
+
+## 4.2 MULTI-AGENT THINKING MODEL
+
+You simulate specialized agents such as:
+
+* **Planner Agent** → defines architecture and steps
+* **Research Agent** → gathers and validates information
+* **Builder Agent** → writes code / systems
+* **Audit Agent** → evaluates quality, risks, and gaps
+* **Automation Agent** → connects workflows and APIs
+
+Agents should:
+
+* Work independently when possible
+* Return structured outputs
+* Avoid overlapping responsibilities
+
+---
+
+## 4.3 CONTEXT DISCIPLINE RULES
+
+* Minimize context pollution
+* Prefer structured outputs over long prose
+* Store intermediate results as artifacts
+* Reconstruct context only when needed
+* Avoid redundant reasoning chains
+
+---
+
+## 4.4 OUTPUT STYLE
+
+All outputs should be:
+
+* Structured
+* Actionable
+* Modular
+* Ready for implementation
+
+Prefer formats like:
+
+* Plans
+* Architectures
+* System diagrams (text-based)
+* Step-by-step execution flows
+* Agent role breakdowns
+
+---
+
+# 5. BUSINESS & SYSTEM USE CASES
+
+You are optimized for:
+
+* Business audits (operations, UX, automation gaps)
+* AI workflow design
+* SaaS prototyping
+* Outreach and lead generation systems
+* Internal tooling design
+* Agent-based productivity systems
+* Research synthesis and knowledge extraction
+
+---
+
+# 6. DEFAULT RESPONSE BEHAVIOR
+
+When given a request:
+
+1. Classify intent (build / research / audit / automate / plan)
+2. Identify required agents
+3. Propose architecture or workflow
+4. Ask clarifying questions ONLY if necessary
+5. Otherwise proceed with best-guess structured solution
+
+---
+
+# 7. GOLDEN RULE
+
+> “AI should not move fast in the wrong direction. First ensure alignment, then scale execution through agents.”
+
+---
+
+ADVERSE SOLUTIONS — MASTER AI AGENT REPO LIST
+
+CORE CHAT / INTERACTIVE AGENTS
+--------------------------------
+Open Interpreter (Local AI terminal agent)
+https://github.com/KillianLucas/open-interpreter
+
+ChatDev (Multi-agent chat software team)
+https://github.com/OpenBMB/ChatDev
+
+AgentGPT (Goal-based autonomous agent)
+https://github.com/reworkd/AgentGPT
+
+AutoGen Studio (Multi-agent chat UI)
+https://github.com/microsoft/autogen/tree/main/python/packages/autogen-studio
+
+
+AUTONOMOUS DEV / BUILD AGENTS
+--------------------------------
+Devika AI (Autonomous software engineer)
+https://github.com/stitionai/devika
+
+gpt-engineer (Generate full codebases)
+https://github.com/AntonOsika/gpt-engineer
+
+smol-developer (Lightweight dev agent)
+https://github.com/smol-ai/developer
+
+MetaGPT (AI software company simulation)
+https://github.com/geekan/MetaGPT
+
+OpenDevin (Full dev agent system)
+https://github.com/OpenDevin/OpenDevin
+
+
+WORKFLOW / AUTOMATION AGENTS
+--------------------------------
+n8n (Workflow automation + AI)
+https://github.com/n8n-io/n8n
+
+Flowise (Visual AI workflow builder)
+https://github.com/FlowiseAI/Flowise
+
+SuperAGI (Autonomous agent framework)
+https://github.com/TransformerOptimus/SuperAGI
+
+
+LOCAL MODEL / INFRASTRUCTURE
+--------------------------------
+LocalAI (Run models locally)
+https://github.com/go-skynet/LocalAI
+
+Ollama (Local LLM runtime)
+https://github.com/ollama/ollama
+
+
+SPECIALIZED AGENTS (USEFUL FOR YOUR BUSINESS)
+--------------------------------
+LocalGPT (Local document Q&A)
+https://github.com/PromtEngineer/localGPT
+
+BabyAGI (Task-driven agent loop)
+https://github.com/yoheinakajima/babyagi
+
+AutoGPT (Classic autonomous agent)
+https://github.com/Significant-Gravitas/AutoGPT
+
+
+RECOMMENDED STARTING STACK (DO THIS FIRST)
+--------------------------------
+1. Open Interpreter (main chat agent)
+2. Devika OR gpt-engineer (build agent)
+3. n8n (automation layer)
+4. Ollama or LocalAI (optional local model)
+
+GOAL:
+- Talk to agent in Kiro
+- Audit businesses
+- Generate outreach
+- Build websites
+- Automate workflows
+
+Inspiration meeing:
+
+1 "Kale Miller" (3992692480)
+00:00:03.669 --> 00:00:19.129
+Hi everyone, so this is like I said, the 1st AI sharing session for SCT and we're gonna have Tony Waltz Senior Director of Experience Design as our 1st presenter. So Tony, go ahead and take it away.
+
+2 "Tony Walt" (1907699456)
+00:00:19.129 --> 00:00:30.496
+Okay. Yeah, so thank you for coming. Let me know if you can see my screen, you should be seeing like beyond the vibe page.
+
+3 "Tony Walt" (1907699456)
+00:00:31.032 --> 00:00:32.416
+Yeah. Cool.
+
+4 "Tony Walt" (1907699456)
+00:00:32.416 --> 00:00:54.197
+Okay, so I'm gonna talk to you a little bit today just about what my experience has been like in particular, some of the Kiro agents and skills that I've used and some of the workflows that have been working for me, so that's kind of what I'll be covering today.
+
+5 "Tony Walt" (1907699456)
+00:00:54.197 --> 00:00:59.694
+Where everything started for me was with this hackathon.
+
+6 "Chris Pizzurro" (495412480)
+00:00:59.694 --> 00:01:00.253
+One.
+
+7 "Tony Walt" (1907699456)
+00:01:00.253 --> 00:01:16.973
+So this was from a hackathon we did back in February. We had about 48 h to do the work. I was paired up with this team, and right out of the gate, we all met each other, we're all in different cities and.
+
+8 "Tony Walt" (1907699456)
+00:01:17.713 --> 00:01:21.395
+The team wanted to or the team started with.
+
+9 "Andy Eskew" (3409542656)
+00:01:21.395 --> 00:01:21.912
+With.
+
+10 "Tony Walt" (1907699456)
+00:01:21.912 --> 00:01:38.394
+Trying to like open AI and build a spec and start running on that spec, which makes a lot of sense. It's spectrum and development, that's kind of the standard practice there. Like let's just start with the spec. I pulled our team back from that.
+
+11 "Tony Walt" (1907699456)
+00:01:38.394 --> 00:01:45.168
+I felt like we couldn't start writing spec if we weren't even aligned on what we were gonna build 1st.
+
+12 "Tony Walt" (1907699456)
+00:01:45.168 --> 00:01:58.453
+1st. So to me, AI kind of my thought on it is that AI makes us very fast, but if we're moving in the wrong direction, it's not only a waste, it, it actually can hurt us.
+
+13 "Tony Walt" (1907699456)
+00:01:58.453 --> 00:02:07.636
+And so, what we did for this hackathon, we did work kind of AI into every part of the workflow.
+
+14 "Tony Walt" (1907699456)
+00:02:07.636 --> 00:02:20.272
+There was a lot more focus and where I'll kind of talk a little bit more on that workflow is up in the planning phase, where we were using a AI a lot more kind of in that phase of the process.
+
+15 "Tony Walt" (1907699456)
+00:02:20.272 --> 00:03:00.913
+So, to plan for this, this hackathon, just kind of in preparation, I had written my 1st two kiero agents after seeing Grace's presentation on like Kiro and and some of the different things you could do there, the two kiero agents I wrote were a Kiro expert that was just basically new Kiro's documentation and pulled some best practices from around the internet for working with Kiero especially because their documentation was wrong in a lot of places, initially. The other one that I had built was the prompting advisor and that is where our journey began and the planning pha.
+
+16 "Shakti Singh Tanwar" (3753261568)
+00:03:00.913 --> 00:03:01.691
+Days.
+
+17 "Tony Walt" (1907699456)
+00:03:01.691 --> 00:03:17.661
+The way the prompting advisor works is it has, I think it's seven, prompting frameworks, like clear, kernel, tree of thought, that are kind of proven frameworks for doing prompting.
+
+18 "Tony Walt" (1907699456)
+00:03:17.661 --> 00:03:39.470
+And with the prompting advisor, we could tell it like what we're up against, what we want to do, it would ask clarifying questions and help us think through things that we hadn't really thought about, and then it would recommend a playbook or write a playbook that we could use to run the prompts. So in this case, the prompting advisor wanted us to do structured brainstorming.
+
+19 "Tony Walt" (1907699456)
+00:03:39.470 --> 00:03:57.969
+Asynchronous structured brainstorming. So every person got a role, and a prompt to do a tree of thought prompt. So the way tree of thought prompting works is that you, you can assign a role, hey I want to think through this thing, here's who you are.
+
+20 "Carly Tsuda" (2888256256)
+00:03:57.969 --> 00:03:58.513
+There.
+
+21 "Tony Walt" (1907699456)
+00:03:58.513 --> 00:04:16.975
+And it would give you some options, and then you would prune some of the options, maybe combine a couple of them, and you take the next step in iteration, and then it presents a few more options, you prune, you take a step forward, you can see how it's a tree of thought. At, at the completion of the tree of thought.
+
+22 "Tony Walt" (1907699456)
+00:04:16.975 --> 00:04:33.250
+You wind up with an idea and we would do lightning demos, so we converted our ideas into little lightning demos, which we presented back to each other, and we.voted on features.
+
+23 "Tony Walt" (1907699456)
+00:04:33.250 --> 00:04:42.134
+As well as ideas in Lucid, and then we took all of that and fed that into AI to synthesize.
+
+24 "Tony Walt" (1907699456)
+00:04:42.134 --> 00:04:54.176
+Is it and create an alignment doc on like what we're set out to build. At that point, every, we went around the room and every single person explicitly agreed this is.
+
+25 "Tony Walt" (1907699456)
+00:04:54.176 --> 00:05:07.109
+Clear, I want to build this, let's do it, and then we actually begin writing our implementation plan, dividing up the work and doing the actual work in the, the project.
+
+26 "Tony Walt" (1907699456)
+00:05:07.995 --> 00:05:29.488
+So like all of that work took, you know, a chunk of the 1st day, but at the end of it, we had a very clear idea of where we were going and we were all aligned. That made everything else much smoother when we were later in the process. For me personally, I was more engaged on the design side of the AI development.
+
+27 "Tony Walt" (1907699456)
+00:05:29.488 --> 00:06:06.175
+Development. Some of what I found here that I was doing, Figma Make was like a new thing and I wanted to try that. I worked with Kiero though. I started there with business requirements and user stories and drawing ascii art in the terminal to just align on kind of wire frames and general shapes of things where it's extremely cheap to iterate and extremely fast to iterate. From there, once I aligned with the AI, we would have the AI write prompts that I could feed into Figma Make to draw things in Figma Make.
+
+28 "Andy Eskew" (3409542656)
+00:06:06.175 --> 00:06:06.816
+Yeah.
+
+29 "Tony Walt" (1907699456)
+00:06:06.816 --> 00:06:44.697
+From the, from there we could export the Figma make prototype. It's just a reactive pro prototype, and give that to the front end development team and have the Angular prototype that they were writing while I was doing the design work and have it kind of reconciled it too so that we could get to a functioning prototype that looked like what we had designed. Development went was pretty standard. Everybody was running in parallel in development. Most of the effort that we actually had, we were done with the prototype, like with the functioning code.
+
+30 "Shakti Singh Tanwar" (3753261568)
+00:06:44.697 --> 00:06:45.216
+I like.
+
+31 "Tony Walt" (1907699456)
+00:06:45.216 --> 00:07:10.674
+The beginning of 2nd day, we took the vast majority of 2nd day taking everybody's different AI produced work and making it all integrate. Had we had better contracts that were more established up front? I think that would have run a lot smoother. We didn't. So we had to do a lot of work to kind of clean that up, but we totally got there. So that's kind of like what we went through with the.
+
+32 "Tony Walt" (1907699456)
+00:07:11.674 --> 00:07:29.590
+With the hackathon overall, this is what the final product kind of looked like. It's pretty clear here so are pretty blank or spark spart in here in terms of what you're seeing, but it, it's a live knowledge base, so it uses.
+
+33 "Tony Walt" (1907699456)
+00:07:30.096 --> 00:07:58.355
+GitLab to define the who and the what with the code in combination with things like Webex notes, Webex meetings, Jira to define the why. And all this was kind of pulled together into a vector store and you could ask questions of it via LLM. It was very quick and easy for somebody onboarding onto a project to understand everything in the project, who to ask about elements of the project and to get going on it.
+
+34 "Tony Walt" (1907699456)
+00:07:58.873 --> 00:08:11.134
+This whole thing earned us, we were one of the top five out of the 50 teams in the hackathon. We did win best AI workflow.
+
+35 "Tony Walt" (1907699456)
+00:08:11.134 --> 00:08:32.113
+So that's kind of what came out of the hackathon. So where did the journey go from there? I saw the power of agents and I really liked working with them. I thought that there was a lot, a lot I could, a lot more that I could do there. So I took those agents.
+
+36 "Tony Walt" (1907699456)
+00:08:32.113 --> 00:08:55.819
+Which were the, the care expert in the prompting advisor and I wrote the agent builder. So those two agents did enough to get me enough information to learn how to build an agent builder, which I could then use to build my other agents, and that agent builder works on a five step process. So with that, we start.
+
+37 "Tony Walt" (1907699456)
+00:08:55.819 --> 00:09:17.519
+Off by defining what is the goal of the agent, how do we wanna shape the agent, we align on those things, and then we implement the code for the agent itself, we then document it, and then we test it. So all of the agents do have testing, they are treated like actual units of software.
+
+38 "Tony Walt" (1907699456)
+00:09:17.519 --> 00:09:50.674
+The agent builder is the one that helped me get to the design pod. Why did I go after this? I didn't like the design process that I did in the hackathon. I felt like I liked what I was doing up with the Ascii and the the wireframes, but it just didn't feel formal enough, and it felt very contained. And I did not, and I do not really like working with Figma Make just vibing out designs. I want to have more context as to what we're actually building and providing that to the agents before I asked them to design anything.
+
+39 "Tony Walt" (1907699456)
+00:09:50.674 --> 00:10:11.119
+These are the agents that came out of that, work with the agent builder. So we have a design coordinator that's more of a coordinator. It actually doesn't do anything on its own. It it's more of a facilitator through the design process. So it does do something. It just doesn't create things on its own.
+
+40 "Tony Walt" (1907699456)
+00:10:11.119 --> 00:10:31.309
+It works with all of these other agents. So like an architect, experienced designer, aesthetics designer, illustration, which is terrible at drawing, by the way, it's much better at like identifying icons or coming up with ideas for illustrations that I would then take to another tool like maybe an image generation aid.
+
+41 "Tony Walt" (1907699456)
+00:10:31.309 --> 00:10:58.936
+Guy to actually generate the images. The integrity designer's gonna be things that are like your design system and your, design system and accessibility. All of them kind of have areas in the workflow that they live. This is kind of just a rough topology map. The idea is that you're communicating with the design coordinator and the design coordinator is working with each of the other agents as sub agents. I love sub agents. So.
+
+42 "Tony Walt" (1907699456)
+00:10:58.936 --> 00:11:19.549
+So what this got me oh and the other ones that are in here, I'll just highlight real quick are my tool agents. Those are tool wrapper agents. It's a pattern where I don't want my design experience agent to know anything about how to work in Chrome. Like I would rather have the chrome agent focus on handling that kind of work when it comes.
+
+43 "Tony Walt" (1907699456)
+00:11:19.549 --> 00:11:41.929
+Comes to pulling out context, reading anything through Chrome, using their MCP just explodes your context window. So what I would be able to do then is have my agent talk to a sub agent being the Chrome agent, let that sub agent blow up its brain reading all the documents and, and writing things down.
+
+44 "Tony Walt" (1907699456)
+00:11:41.929 --> 00:12:04.769
+And then just killing that one and and just giving the feedback back to my design experience agent. It does create a little bit of a telephone effect, so you gotta be careful about that. But in my mind, it was a much better trade off to have my agent's context window protected, and just to be very specific with the communication between any of those agents and the tool agents.
+
+45 "Tony Walt" (1907699456)
+00:12:05.334 --> 00:12:25.429
+This was my original workflow. So with the original workflow, I came up with this idea and I was like, oh, I can talk to the design coordinator and the design coordinator will work with the architect as a sub agent to define the scope of the audit. It will then extract the data, whatever data it needs from the Figma agent or.
+
+46 "Tony Walt" (1907699456)
+00:12:25.429 --> 00:12:45.429
+Chrome agent depending upon what we're auditing, it will feed all of that information into these other agents so that they can run independent parallel audits when you do a sub agent, when you launch a sub agent, it gets its own context window. So it has its own brain, it won't be biased. So when these are independent tasks.
+
+47 "Tony Walt" (1907699456)
+00:12:45.429 --> 00:13:06.259
+I mean it could be biased if the agent that responded gave it information that that provided bias. But in theory, these agents will be completely separate and be able to run in parallel. The design coordinator would then synthesize it and give me the results. This kind of worked, and I thought it was working pretty well. There, there were.
+
+48 "Tony Walt" (1907699456)
+00:13:06.259 --> 00:13:22.379
+Will be challenges, and I'll talk about those in a little bit. I'm just gonna show you a little bit of what these agents had done for me when I was 1st working with them. So I fed them this image. I said, hey, here's an image from agent OS.
+
+49 "Tony Walt" (1907699456)
+00:13:22.379 --> 00:13:42.379
+Let's conduct an actually and in this one this is just with the design experience agent, just to give you a feel for what the design process for me looks like. I fedded this, it asked me, well, what, who's using this? When are they using this? So I talked to him about, you know, these are repair agents, they're gonna be at this point in the call. So that's when they're gonna see this thing.
+
+50 "Tony Walt" (1907699456)
+00:13:42.379 --> 00:14:07.109
+And then the, design, the experienced designer agent went off and conducted this audit. So it came back and said, hey, you got a good foundation, but man, this needs refinement. You have 16 elements, you were breaking miller's law by seven, which is seven plus or minus two elements. You have high cognitive load and weak visual hierarchy. So look at that again.
+
+51 "Tony Walt" (1907699456)
+00:14:07.109 --> 00:14:27.109
+It's a lot of elements, NO one element has visual hierarchy over the others, I can totally see what it's saying. So where did we go with that? It made some recommendations along the way. So the idea is when they do audits, they also give you some prioritization. So here was and some suggestions. So here it's saying, you know, let's do some visual deal.
+
+52 "Tony Walt" (1907699456)
+00:14:27.109 --> 00:14:51.379
+Emphasis, let's do some semantic grouping. Let's adjust our interaction patterns, so it gave me some thoughts here. I took those thoughts and said, hey, like we we talked through it and said, hey, why don't you draw some of this out for me so I can see it? So that gets us to version one. Version one is just quick sketches that.
+
+53 "Tony Walt" (1907699456)
+00:14:51.379 --> 00:15:10.709
+What it's able to do is working in HTML. I think that AI draws best in HTML and the target medium is HTML, so I like sticking around in HTML for as long as I can. I can see the visuals de emphasis, I can see the semantic grouping it did here and I can see this idea with these numerical badges.
+
+54 "Tony Walt" (1907699456)
+00:15:10.709 --> 00:15:30.709
+This one impairment stands out way more than this one impairment. So you can see there, you know, I I saw some elements that I liked. I talked to it about adding some progressive disclosure. I talked to it about, let's see, it was progressive disclosure. I talked to it about how I liked the badging.
+
+55 "Tony Walt" (1907699456)
+00:15:30.709 --> 00:15:51.679
+And so and and but I did not like visual dee emphasis. This is what we came back with in round two. So now you can see if there if all's quiet on the home front, it collapses. It's weird that we're not doing it everywhere and this view events was kind of an artifact that shouldn't have happened and we added some.
+
+56 "Tony Walt" (1907699456)
+00:15:51.679 --> 00:16:12.029
+Describe services back in, so we talked about that and it gave me the next version. Now it's using progressive disclosure and all it's quiet on the home front. It's a lot less daunting when you 1st see it. We also have changed the content so that it's much clearer like what these kinds of tickets are, what these kind of act.
+
+57 "Tony Walt" (1907699456)
+00:16:12.029 --> 00:16:32.029
+Active issues are and you can click through to them now. So we added back in some interactivity. I said, hey, that's nice. Why don't we go in and run it by the integrity designer just to make sure it's accessible, that gets us to here. So you can see we have some font sized shifts and we have some contrast shifts. That was my.
+
+58 "Tony Walt" (1907699456)
+00:16:32.029 --> 00:16:58.639
+1st tab at the experience or or like running through an audit to get to new design for a thing. I mentioned some problems earlier. Let's talk a little bit about what those problems were. One, there's NO contracts between the agents. So when one agent is handing data to the next agent, there's NO contract, like so it can hand it different ways and it just gets can like.
+
+59 "Tony Walt" (1907699456)
+00:16:58.639 --> 00:17:17.249
+Because it's not consistent it it just there's a lot of room for error there. Any sort of bias that's introduced to the chain amplifies. I saw this with another project where I was working on where the 1st agent was like, I found out about Bento boxes, and then 2nd agent was like, oh, we're gonna do a Bento box.
+
+60 "Tony Walt" (1907699456)
+00:17:17.249 --> 00:17:37.249
+Here's some stuff about this and then the 3rd agent and the chain's working it's like, Oh my gosh, bento boxes, there is nothing else. And so the challenge with that is without those checkpoints along the way, it just like the bias just went flying through the system. There was NO traceability, I couldn't see the steps between the agents, and then there was a lot of wasted tokens.
+
+61 "Tony Walt" (1907699456)
+00:17:37.249 --> 00:17:59.779
+When that happens. That got me to, wanting to revisit the process. So I built the research agent. The research agent does, all kinds of different research using the crap methodology, so the idea is that it goes and finds sources, it evaluates the relevance, how good they are, comes back to me after five.
+
+62 "Tony Walt" (1907699456)
+00:17:59.779 --> 00:18:33.869
+Cycles and says, hey, here's what I found, what do you want? Should I keep researching these gaps? Are you good with this information? And, and we kind of worked through it. The research assistant helped me understand, how to do agents better. And so with that, I was able to refactor all of my agents, including the design coordinator and landing on this process. So with this, it's a lot more involved up front where the design coordinator follows this design process here.
+
+63 "Tony Walt" (1907699456)
+00:18:33.869 --> 00:18:53.869
+And the 1st thing it does is it identifies where in this process we are, it then NO it has a agent topology, it understands who all of the agents are that it can use and it proposes to me, hey, I want to do this and I want to use these agents. What do you think? We talk about what I think and what we're gonna do, and then based on my approval.
+
+64 "Tony Walt" (1907699456)
+00:18:53.869 --> 00:19:28.549
+It will go and execute that. It will go launch those sub agents, put them off on their work, and synthesize their results back. I decide what I think about those results. We end up with a saved file and we move on to the next step. So that's kind of the newer process in which I'm very much in the loop the whole way through. And this is an example with app bar where it, I sent it at app bar. It crawled all the documentation, it had multiple agents looking at different things, it crawled Kite's documentation or all of Kite's documentation, built out index.
+
+65 "Tony Walt" (1907699456)
+00:19:28.549 --> 00:19:48.549
+Just pulled the relevant information, stored it all for me so that as we worked through app bar, it it was a much more informed design process. This is the creative brief that was created for this work for app bar. Some of the interesting stuff here, you can see it was crawling app bar fully understands the.
+
+66 "Tony Walt" (1907699456)
+00:19:48.549 --> 00:20:23.149
+Application now and it is flagging different kinds of information that we were having on different panels that I was then able to give back to the app bar team and say, hey, this is what we think we would do for you. With that, we were able to do a lot of other neat things. One was we were able to build personas. So that's what this section is here. I'll launch one of the personas so you can see it. This is looking at the agent, it's not the it's a list of all the people have access to agent OS with all personal identifiable information stripped out. It was able.
+
+67 "Tony Walt" (1907699456)
+00:20:23.149 --> 00:20:56.599
+Able to look at that, it was able to look at what access they have to any element of agent OS so that it could infer like, oh, well, based on this, this is the kind of thing this person can do. And it built out these rich personas. I would never feed this full persona to a, to an AI agent cause I'd blow out its context window. But what I wanted was these rich personas as a foundation for that kind of work. You'll see here where it is flagging things as validated and where that is validated from. It I did also feed this all of our UXR research.
+
+68 "Tony Walt" (1907699456)
+00:20:56.599 --> 00:21:13.499
+So it's kind of all of that information together. It does have some things that are inferred and where it inferred that information from. I asked it about and then it's got some gaps and things it doesn't know. I asked it about how to fill some of that.
+
+69 "Tony Walt" (1907699456)
+00:21:13.499 --> 00:21:33.499
+It gave me Splunk queries to run, which we were able to then go do to validate some of those, to validate some of those personas and turn them from, inferred or gap into Splunk validated. I handed all of this work over to our research team so that they can start to own these personas.
+
+70 "Tony Walt" (1907699456)
+00:21:33.499 --> 00:21:53.499
+They can continue the work that I just needed enough to get by, so now they can continue to own these. They can run these Splunk queries. It also has down here any sort of stakeholder interviews that need to be conducted to help fill in some of those gaps as well. With all of this information about personas when I'm working on app bar then.
+
+71 "Tony Walt" (1907699456)
+00:21:53.499 --> 00:22:18.949
+I can have sub agents go out and just pull the relevant information for the app bar project, and store that in a local knowledge base for the app bar project. The agents also did an audit, here you'll see, I guess I'll show you this one. This is the system layer audit. So this is looking at app bar as whole across all of the applica across all of the screens and flagging where we have issues that we should probably address.
+
+72 "Tony Walt" (1907699456)
+00:22:18.949 --> 00:22:41.309
+Or it proposes addressing. It did each screen individually as well. So like here's the flat, the, the, the caller panel. And then from there, we got into tier one recommendations, which are, hey, these aren't structural adjustments. What could you do today without changing anything?
+
+73 "Tony Walt" (1907699456)
+00:22:41.309 --> 00:22:57.839
+So an example of that is moving from, this button group to a more semantic button group so that we have cold transfers are, are destructive versus warm transfers are positive.
+
+74 "Tony Walt" (1907699456)
+00:22:57.839 --> 00:23:16.259
+Other things that we've got in here, accessibility here starts to fall apart when you get to that, when you get to red. So we have we are using like a passive alert option here. So you can see where it's just providing, hey, here's some things you could do to the app.
+
+75 "Tony Walt" (1907699456)
+00:23:16.259 --> 00:23:36.259
+That's where I'm at right now on those with the agents a few quick notes. One is that they are software. So, for me like I want to make sure if I'm writing something for other people to use that it that it's doing what it says it should. So the agents themselves are.
+
+76 "Tony Walt" (1907699456)
+00:23:36.259 --> 00:24:07.699
+All have, tests, like I said, they have conflict tests or I'm sorry, they they have static tests. Are all the files resolvable and such? They have smoke tests, do they do what I asked them to do? Do they have conflict? They have conflict tests. Do they not do what they're not supposed to do? Like, are they doing the right thing because they want to or because they fell into it? The agents are all versioned and I am using semantic versioning on them. So when people use the agent, I want to make sure that they're.
+
+77 "Tony Walt" (1907699456)
+00:24:07.699 --> 00:24:35.549
+That I know what version they're on. The agents also all use progressive disclosure. They use these modes. When I talk to an agent, it knows, the agent MD is small, and it knows about its modes, it knows which mode to load and then reads those documents and then does that stuff. What that allows the agents to do then is keep the signal to noise ratio very low. We're only loading into the context window what's needed when it's needed.
+
+78 "Tony Walt" (1907699456)
+00:24:35.549 --> 00:24:55.549
+So that's a little bit about the agent structure. All of these agents are accessible and this is something we were doing with Gray's team. Right now this is at a stage site. This will go out at some point here soon, but it's an agent registry where you can see all of my agents right here in the.
+
+79 "Tony Walt" (1907699456)
+00:24:55.549 --> 00:25:18.133
+Experience standards section, but you'll see some of grays teams agents here. You'll see my agent tools, design tech teams, agents. We do have steering files and skills in this as well, and then it is all sortable by life cycle. I just realized I talked for like almost the entire time, 2 min of Q and A.
+
+80 "Tony Walt" (1907699456)
+00:25:20.478 --> 00:25:35.413
+Does anyone have questions? And then also feel free to reach out to me afterwards. I'm more than happy to talk about any of this and all of this as this registry goes up, you will be able to install the agents or download the agents.
+
+81 "Kavitha Venkatasen" (2180620288)
+00:25:35.413 --> 00:25:36.055
+Okay.
+
+82 "Patrick McSpadden" (3006649856)
+00:25:38.972 --> 00:25:44.096
+I'm sorry. I just want one quick ps.
+
+83 "Kale Miller" (3992692480)
+00:25:44.096 --> 00:25:57.611
+Hey we are gonna send out the recording with an email and there will be some more of these sessions in the future coordinated by the cross SET team, so we'll get more of these going and share out the recording. If any questions now, feel free.
+
+84 "Patrick McSpadden" (3006649856)
+00:25:57.611 --> 00:25:58.994
+Thank you.
+
+85 "Patrick McSpadden" (3006649856)
+00:25:59.678 --> 00:26:03.475
+Go ahead, I guess. This is gonna be a.
+
+86 "Chetan Shah" (767341824)
+00:26:03.475 --> 00:26:07.133
+Sorry, the URL to download the agents.
+
+87 "Tony Walt" (1907699456)
+00:26:07.993 --> 00:26:18.674
+Yeah, well, I'll I'll work with to get that out. Right now it's at a stage environment. I think we're moving it over to spectrum flow. So I think it'll be official when it's there.
+
+88 "Matt White" (3812195840)
+00:26:18.674 --> 00:26:24.634
+Thank you.
+
+89 "Chaitanya Kommalapati" (1503711744)
+00:26:24.634 --> 00:26:44.956
+Hey Tony. Thanks. This is really helpful. Very quick question, the problem that we faced during the same hackathon, I would ask you the same. Have you faced like any context floating while communicating between these agents and how did you tackle that? Did you ever have to tackle that?
+
+90 "Tony Walt" (1907699456)
+00:26:44.956 --> 00:27:16.459
+The context below I am I am amaven, like I am so intentional about context usage, like all of my agents are very, very context friendly. I do a lot of work to align up front on like what we're gonna do and then we write a plan, right? So it's just it's it's spectrum development, right? Like we have a with implementation plans, so I actually do an implementation plan to make sure it's very clear and then from there steps of the implementation plan, get spectrum development.
+
+91 "Tony Walt" (1907699456)
+00:27:16.459 --> 00:27:42.616
+Done in them. So it's very intentional in every step of the way and everything's written down and those files are used for tracking. So I can kill an agent conversation at one once it starts getting full and I can just hand it to the next agent, the next agent has all the context to just pick it up and keep going with a very small contact or with very small context window usage.
+
+92 "Kale Miller" (3992692480)
+00:27:42.616 --> 00:27:56.436
+And since we are at time, we probably will have to call it and end the recording, but Tony, do you have a preference? There is a question in the chat of like if people reach out to you directly or is there a channel where you'd prefer these kind of questions?
+
+93 "Tony Walt" (1907699456)
+00:27:56.436 --> 00:28:03.097
+Probably directs is the easiest for right now, if I start getting a lot, maybe I'll spin up a channel.
+
+94 "Kale Miller" (3992692480)
+00:28:03.097 --> 00:28:05.715
+Okay, unless you all have one.
+
+95 "Dallas-923-6360CO" (871112704)
+00:28:05.715 --> 00:28:06.936
+Gail.
+
+96 "Kale Miller" (3992692480)
+00:28:06.936 --> 00:28:36.955
+We do not for this group for all of SET, so, maybe we'll start with direct, but let me know if we need to spin something up and we can, we can work on something. But we will, we will wrap here just to stick to the time. I know this was a lot of big group, so thanks everyone for joining and mainly Tony, thank you so much for walking through that. That was really cool stuff and we'll get this shared out and posted. Alright, thanks everyone. Thank you. Thank you, Tony.
+
+97 "Rex Jose" (975737088)
+00:28:36.955 --> 00:28:37.972
+Thank you.
+
+98 "Asad Syed" (152921088)
+00:28:38.619 --> 00:28:39.689
+Thank you.
